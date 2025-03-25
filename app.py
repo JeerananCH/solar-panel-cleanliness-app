@@ -25,4 +25,4 @@ if uploaded_file is not None:
 
     pred = model.predict(img_array)[0][0]
     label = "🧼 Clean" if pred < 0.5 else "🧹 Dirty"
-    st.markdown(f"### 🔍 Prediction: **{label}** ({confidence:.2%} confidence)")
+    st.markdown(f"### 🔍 Prediction: **{label}** ({pred:.2f})")
