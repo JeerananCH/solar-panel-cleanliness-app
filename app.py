@@ -24,5 +24,5 @@ if uploaded_file is not None:
     img_array = np.expand_dims(img_array, axis=0)
 
     pred = model.predict(img_array)[0][0]
-    label = "🧼 Clean" if pred < 0.7 else "🧹 Dirty"
+    label = "🧼 Clean" if pred < 0.5 else "🧹 Dirty"
     st.markdown(f"### 🔍 Prediction: **{label}** ({pred:.2f})")
