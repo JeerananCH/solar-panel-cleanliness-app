@@ -17,7 +17,7 @@ st.markdown("อัปโหลดภาพแผงโซลาร์เซล�
 uploaded_file = st.file_uploader("📤 อัปโหลดภาพ .jpg หรือ .png", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
-    img = load_img(uploaded_file, target_size=(224, 224))
+    img = load_img(uploaded_file)
     st.image(img, caption="📸 ตัวอย่างภาพ", use_container_width=True)
 
     img_array = img_to_array(img) / 255.0
