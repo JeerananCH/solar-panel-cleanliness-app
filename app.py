@@ -18,7 +18,7 @@ uploaded_file = st.file_uploader("📤 อัปโหลดภาพ .jpg ห�
 
 if uploaded_file is not None:
     img = load_img(uploaded_file, target_size=(224, 224))
-    st.image(img, caption="📸 ตัวอย่างภาพ", use_column_width=True)
+    st.image(img, caption="📸 ตัวอย่างภาพ", use_container_width=True)
 
     img_array = img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
